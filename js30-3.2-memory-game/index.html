@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory game</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <div class="_wrapper">
+      <section class="memory">
+        <div class="memory__container _container">
+          <div class="results">
+            <div class="moves">Your moves: 0</div>
+          </div>
+          <ul class="memory-list">
+            <li class="memory-card" data-framework="aurelia">
+              <img
+                class="front-face"
+                src="assets/svg/aurelia.svg"
+                alt="Aurelia"
+              />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="aurelia">
+              <img
+                class="front-face"
+                src="assets/svg/aurelia.svg"
+                alt="Aurelia"
+              />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="vue">
+              <img class="front-face" src="assets/svg/vue.svg" alt="Vue" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="vue">
+              <img class="front-face" src="assets/svg/vue.svg" alt="Vue" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="angular">
+              <img
+                class="front-face"
+                src="assets/svg/angular.svg"
+                alt="Angular"
+              />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="angular">
+              <img
+                class="front-face"
+                src="assets/svg/angular.svg"
+                alt="Angular"
+              />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="ember">
+              <img class="front-face" src="assets/svg/ember.svg" alt="Ember" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="ember">
+              <img class="front-face" src="assets/svg/ember.svg" alt="Ember" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="backbone">
+              <img
+                class="front-face"
+                src="assets/svg/backbone.svg"
+                alt="Backbone"
+              />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="backbone">
+              <img
+                class="front-face"
+                src="assets/svg/backbone.svg"
+                alt="Backbone"
+              />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="react">
+              <img class="front-face" src="assets/svg/react.svg" alt="React" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="react">
+              <img class="front-face" src="assets/svg/react.svg" alt="React" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="css">
+              <img class="front-face" src="assets/svg/css.svg" alt="CSS" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="css">
+              <img class="front-face" src="assets/svg/css.svg" alt="CSS" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="nodeJS">
+              <img
+                class="front-face"
+                src="assets/svg/node.js.svg"
+                alt="Node JS"
+              />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="nodeJS">
+              <img
+                class="front-face"
+                src="assets/svg/node.js.svg"
+                alt="Node JS"
+              />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="html">
+              <img class="front-face" src="assets/svg/html.svg" alt="HTML" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="html">
+              <img class="front-face" src="assets/svg/html.svg" alt="HTML" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+
+            <li class="memory-card" data-framework="JS">
+              <img class="front-face" src="assets/svg/js.svg" alt="JS" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+            <li class="memory-card" data-framework="JS">
+              <img class="front-face" src="assets/svg/js.svg" alt="JS" />
+              <img
+                class="back-face"
+                src="assets/svg/front.svg"
+                alt="Front icon"
+              />
+            </li>
+          </ul>
+          <div class="endgame">
+            <div class="endgame__text">Well done, game over!</div>
+            <button class="endgame__reset">Play again</button>
+            <table class="endgame__table">
+              <tr>
+                <th>№</th>
+                <th>Score:</th>
+              </tr>
+              <tr>
+                <td class="endgame__number">1</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">2</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">3</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">4</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">5</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">6</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">7</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">8</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">9</td>
+                <td class="endgame__score"></td>
+              </tr>
+              <tr>
+                <td class="endgame__number">10</td>
+                <td class="endgame__score"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <ul class="footer__list">
+          <li class="footer__item">@ 2022</li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="https://github.com/klekkwedge"
+              target="_blank"
+              >github</a
+            >
+          </li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="https://rs.school/js-stage0/"
+              target="_blank"
+              >Rolling Scopes School</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
