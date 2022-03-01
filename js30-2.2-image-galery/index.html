@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image-galery</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__content">
+          <img src="assets/svg/camera_white_24dp.svg" width="40"></img>
+          <h1 class="header__title">Unsplash API</h1>
+        </div>
+        <div class="header__block-search">
+          <input placeholder="Enter some text here" class="header__input"  maxlength="36" autofocus autocomplete="off"/>
+          <button  class="header__reset"><img src="assets/svg/clear_black_24dp.svg"></button>
+          <button class="header__search"><img src="assets/svg/search_white_24dp.svg"></button>
+        </div>
+      
+      </div>
+    </header>
+    <main class="page">
+      <div class="page__container">
+        <ul class="page__list">
+        </ul>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+          <span>© 2022</span>
+          <a
+            class="footer__link"
+            href="https://github.com/klekkwedge"
+            target="_blank"
+            >github</a
+          >
+          <a
+            class="footer__link"
+            href="https://rs.school/js-stage0/"
+            target="_blank"
+            >
+            <img class="footer__image" src="assets/svg/rs_school_js.svg"></a
+          >
+      </div>
+    </footer>
+
+  </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
