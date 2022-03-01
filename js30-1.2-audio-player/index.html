@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom audio player</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="_wrapper">
+      <section class="audio">
+        <div class="audio__container _container">
+          <img class="audio__image" />
+          <div class="audio__info">
+            <h3 class="audio__title">title.mp3</h3>
+            <p class="audio__artist">Artist name</p>
+          </div>
+
+          <div class="audio__progress progress">
+            <input
+              class="progress__bar"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              oninput="changeProgressBar()"
+            />
+            <div class="progress__show">
+              <p class="progress__current">0:00</p>
+              <p class="progress__total">0:00</p>
+            </div>
+          </div>
+          <div class="audio__control control">
+            <button class="audio__auto" onclick="autoplaySwitch()">
+              <i class="fa-solid fa-repeat"></i>
+            </button>
+            <button onclick="previous_song()" class="control__previous">
+              <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button onclick="justplay()" class="control__play">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <button onclick="next_song()" class="control__next">
+              <i class="fa-solid fa-forward-step"></i>
+            </button>
+          </div>
+
+          <div class="audio__volume volume">
+            <i class="fa-solid fa-volume-high" onclick="muteSound()"></i>
+            <input
+              class="volume__change"
+              type="range"
+              min="0"
+              max="100"
+              value="90"
+              oninput="changeVolume()"
+            />
+            <p class="volume__show">90</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <ul class="footer__list">
+          <li class="footer__item">@ 2022</li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="https://github.com/klekkwedge"
+              target="_blank"
+              >github</a
+            >
+          </li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="https://rs.school/js-stage0/"
+              target="_blank"
+              >Rolling Scopes School</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

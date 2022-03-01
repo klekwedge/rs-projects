@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-----The Foundation------------------------------------------*/
+/*-------------------------------------------------------------*/
+body {
+  background: #262334;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  outline: none;
+  height: 2px;
+  margin: 0 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #02b0d5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Technical classes---------------------------------------*/
+/*-------------------------------------------------------------*/
+._container {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+._wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Audio player--------------------------------------------*/
+/*-------------------------------------------------------------*/
+.audio {
+  padding: 30px 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.audio button {
+  padding: 10px 15px;
+  margin: 0 10px;
+}
+
+.audio__container {
+  -webkit-box-shadow: 1px 0px 20px 6px rgba(52, 218, 255, 0.3);
+          box-shadow: 1px 0px 20px 6px rgba(52, 218, 255, 0.3);
+  border-radius: 10px;
+  background: #262334;
+  padding: 15px;
+}
+
+@media (max-width: 350px) {
+  .audio__container {
+    padding: 15px 10px;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----Audio image---------------------------------------------*/
+/*-------------------------------------------------------------*/
+.audio__image {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  text-align: center;
+  -webkit-box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
+          box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
+}
+
+@media (max-width: 350px) {
+  .audio__image {
+    height: 270px;
+    width: 270px;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----Audio volume--------------------------------------------*/
+/*-------------------------------------------------------------*/
+.audio__volume {
+  margin: 0 auto;
+  width: 80%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.volume__show {
+  border-radius: 5px;
+  font-size: 15px;
+  width: 35px;
+  text-align: center;
+  padding: 5px;
+  margin: 0px 5px 0px 0px;
+  background: rgba(245, 245, 245, 0.2);
+}
+
+.volume__change {
+  background: -webkit-gradient(linear, left top, right top, from(#82cfd0), color-stop(90%, #82cfd0), color-stop(0%, #fff), to(#fff));
+  background: linear-gradient(to right, #82cfd0 0%, #82cfd0 90%, #fff 0%, #fff 100%);
+}
+
+.volume i {
+  border-radius: 5px;
+  width: 28px;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+  background: rgba(245, 245, 245, 0.2);
+}
+
+.volume i:hover {
+  background: rgba(245, 245, 245, 0.2);
+}
+
+/*-------------------------------------------------------------*/
+/*-----AUDIO INFO----------------------------------------------*/
+/*-------------------------------------------------------------*/
+.audio__info {
+  margin-bottom: 20px;
+}
+
+.audio__title {
+  font-size: 35px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.audio__artist {
+  font-size: 18px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/*-------------------------------------------------------------*/
+/*-----AUDIO CONTROL-------------------------------------------*/
+/*-------------------------------------------------------------*/
+.audio__control {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.audio__control button:not(:first-child) {
+  border: none;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: rgba(245, 245, 245, 0.4);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.audio__control button:not(:first-child):active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background: #02b0d5;
+}
+
+.audio__control button:not(:first-child):hover {
+  background: rgba(245, 245, 245, 0.8);
+}
+
+/*-------------------------------------------------------------*/
+/*-----AUDIO AUTO----------------------------------------------*/
+/*-------------------------------------------------------------*/
+.audio__auto {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 5px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.audio__auto:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background: #02b0d5;
+}
+
+.audio__auto:hover {
+  background: rgba(245, 245, 245, 0.4);
+}
+
+/*-------------------------------------------------------------*/
+/*-----AUDIO PROGRESS------------------------------------------*/
+/*-------------------------------------------------------------*/
+.audio__progress {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.progress__bar {
+  background: -webkit-gradient(linear, left top, right top, from(#82cfd0), color-stop(0%, #82cfd0), color-stop(0%, #fff), to(#fff));
+  background: linear-gradient(to right, #82cfd0 0%, #82cfd0 0%, #fff 0%, #fff 100%);
+}
+
+.progress__show {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0px 20px 0px;
+}
+
+/*-------------------------------------------------------------*/
+/*-----FOOTER--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+.footer {
+  padding: 20px 0px;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px 20px;
+}
+
+.footer__item {
+  font-size: 25px;
+  color: white;
+}
+
+.footer__link {
+  font-size: 25px;
+  color: white;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.footer__link:hover {
+  color: rgba(52, 218, 255, 0.6);
+}
+/*# sourceMappingURL=style.css.map */
