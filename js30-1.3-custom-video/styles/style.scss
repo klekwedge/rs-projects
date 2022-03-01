@@ -1,0 +1,231 @@
+@import "_nullstyle";
+
+/*-------------------------------------------------------------*/
+/*-----The Foundation------------------------------------------*/
+/*-------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #1f2156;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(31, 33, 86),
+    rgb(77, 177, 180),
+    rgb(155, 156, 193)
+  );
+  background: -moz-linear-gradient(
+    45deg,
+    rgb(31, 33, 86),
+    rgb(77, 177, 180),
+    rgb(155, 156, 193)
+  );
+  background: linear-gradient(
+    45deg,
+    rgb(31, 33, 86),
+    rgb(77, 177, 180),
+    rgb(155, 156, 193)
+  );
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="range"]{
+  -webkit-appearance: none;
+  outline: none;
+  width: 100%;
+  margin: 0 5px;
+  background: linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 90%,
+    #C8C8C8 90%,
+    #C8C8C8 100%
+  );
+  border-radius: 8px;
+  height: 8px;
+}
+input[type="range"].speed__slider {
+  background: #C8C8C8;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #bdae82;
+
+}
+
+.material-icons {
+  color: white;
+}
+/*-------------------------------------------------------------*/
+/*-----Player--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.player {
+  max-width: 1000px;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.player:fullscreen {
+  max-width: none;
+  width: 100%;
+}
+
+.player:-webkit-full-screen {
+  max-width: none;
+  width: 100%;
+}
+
+.player__video {
+  width: 100%;
+}
+
+.player__button {
+  background: none;
+  border: 0;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  justify-content: flex-start;
+  max-width: 50px;
+}
+
+.player__button:focus {
+  border-color: #ffc600;
+}
+
+.player__slider {
+  width: 10px;
+  height: 30px;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Player controls-----------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.player__controls {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  transform: translateY(100%) translateY(-5px);
+  transition: all 0.3s;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.player:hover {
+  .player__controls {
+    transform: translateY(0);
+  }
+  .progress {
+    height: 10px;
+  }
+}
+
+.player__controls > * {
+  flex: 1;
+}
+
+.player__controls i {
+  flex: 0;
+  cursor: pointer;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Main button----------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.main__button {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+      brightness(92%) contrast(87%);
+  }
+}
+
+.main__button img {
+  width: 13%;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Progress------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.progress {
+  flex: 10;
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  height: 5px;
+  transition: height 0.3s;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.progress__filled {
+  width: 50%;
+  background: #bdae82;
+  flex: 0;
+  flex-basis: 50%;
+}
+
+/*-------------------------------------------------------------*/
+/*-----FOOTER--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.footer {
+  padding: 10px 0px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 20px;
+  }
+  .footer__item {
+    font-size: 25px;
+    color: white;
+  }
+  &__link {
+    font-size: 25px;
+    color: white;
+    transition: all 0.2s ease-in;
+    &:hover {
+      color: rgb(189, 174, 130);
+    }
+  }
+}
+
+

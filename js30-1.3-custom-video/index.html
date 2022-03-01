@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom VideoPlayer</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/favicon//apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/favicon//apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/favicon//apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/favicon//apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/favicon//apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/favicon//apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/favicon//apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/favicon//apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon//apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon//android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/favicon//favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon//favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon//manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/favicon//ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <section class="player">
+      <video class="player__video viewer" src="assets/video/video.mp4"></video>
+      <button class="main__button">
+        <img src="assets/svg/Play_hover.svg" />
+      </button>
+      <div class="player__controls">
+        <div class="progress">
+          <div class="progress__filled"></div>
+        </div>
+        <button
+          class="player__button toggle material-icons"
+          title="Toggle Play"
+        >
+          play_arrow
+        </button>
+        <i class="material-icons player__volume-icon">volume_up</i>
+        <input
+          type="range"
+          name="volume"
+          class="player__slider volume__slider"
+          min="0"
+          max="1"
+          step="0.05"
+          value="0.9"
+        />
+        <i class="material-icons">speed</i>
+        <input
+          type="range"
+          name="playbackRate"
+          class="player__slider speed__slider"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+        />
+          <button data-skip="-10" class="player__button">
+            <i class="material-icons">replay_10</i>
+          </button>
+          <button data-skip="10" class="player__button">
+            <i class="material-icons">forward_10</i>
+          </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__body">
+        <ul class="footer__list">
+          <li class="footer__item">@ 2022</li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="https://github.com/klekkwedge"
+              target="_blank"
+              >github</a
+            >
+          </li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="https://rs.school/js-stage0/"
+              target="_blank"
+              >Rolling Scopes School</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
