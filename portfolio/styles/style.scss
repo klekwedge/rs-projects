@@ -1,0 +1,628 @@
+@import "_nullstyle";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap");
+
+/*-------------------------------------------------------------*/
+/*-----The Foundation------------------------------------------*/
+/*-------------------------------------------------------------*/
+$black-color: #000000;
+$gold-color: #bdae82;
+$white-color: #ffffff;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
+body._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Theme---------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+body.light-theme {
+  background-color: $white-color;
+  color: $black-color;
+  & .hero {
+    color: $white-color;
+  }
+  & ._main-title {
+    background-color: $white-color;
+    color: $black-color;
+  }
+  & ._heading {
+    background: url(../assets/img/section-title-line-dark.jpg) no-repeat center;
+  }
+  & .item-price__text {
+    color: $black-color;
+  }
+  & .portfolio__button {
+    color: $black-color;
+    &:hover {
+      color: $black-color;
+    }
+    &:active {
+      color: $white-color;
+      background: $gold-color;
+    }
+  }
+}
+
+body.dark-theme {
+  background-color: $black-color;
+  color: $white-color;
+}
+/*-------------------------------------------------------------*/
+/*-----Technical classes---------------------------------------*/
+/*-------------------------------------------------------------*/
+
+._container {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+._ibg {
+  position: relative;
+}
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+._main-title {
+  font-family: Merriweather;
+  font-size: 40px;
+  line-height: 200%;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 auto;
+  background-color: $black-color;
+  text-align: center;
+  color: $gold-color;
+}
+._heading {
+  margin: 100px 0px 60px 0px;
+  background: url(../assets/img/section-title-line.jpg) no-repeat center;
+}
+
+._icon {
+  transition: 0.3s;
+  &:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+      brightness(92%) contrast(87%);
+  }
+}
+
+._link {
+  color: $white-color;
+  transition: 0.3s;
+  &:hover {
+    color: $gold-color;
+  }
+}
+
+._button {
+  transition: 0.3s;
+  background: $gold-color;
+  max-width: 220px;
+  padding: 8px 70px;
+  font-size: 20px;
+  line-height: 200%;
+  color: $black-color;
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----HEADER--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.header {
+  color: $white-color;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  &__container {
+    display: flex;
+    min-height: 90px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  display: flex;
+  &__icon {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    font-size: 20px;
+    line-height: 250%;
+    margin-right: 30px;
+  }
+}
+.language__eng,
+.language__rus {
+  background-color: Transparent;
+  color: $white-color;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 250%;
+  &:hover {
+    color: $gold-color;
+  }
+}
+
+.language__active {
+  color: $gold-color;
+}
+
+.menu__theme-button {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 20px auto;
+  border-radius: 50%;
+  background-color: transparent;
+  margin: auto 30px auto 0;
+  width: 40px;
+}
+/*-------------------------------------------------------------*/
+/*-----MENU-BURGER---------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  body.light-theme {
+    & .menu__body {
+      background: $white-color;
+    }
+    & .menu__link {
+      color: $black-color;
+    }
+    & .menu__icon._active {
+      & span,
+      &::before,
+      &::after {
+        background-color: $black-color;
+      }
+    }
+  }
+  body.dark-theme {
+    & .menu__body {
+      background: $black-color;
+    }
+  }
+  .menu__icon {
+    margin: auto 0;
+    margin-right: 20px;
+    z-index: 10;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    height: 28px;
+
+    & span,
+    &::before,
+    &::after {
+      right: 0;
+      background-color: #ffffff;
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      transition: all 0.3s ease 0s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    & span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+    }
+
+    &._active span {
+      transform: scale(0) translate(0px, -50%);
+    }
+
+    &._active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    &._active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+    }
+  }
+
+  .menu__body {
+    transform: translate(-100%, 0px);
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: right 0.3s ease 0s;
+  }
+  .menu__body._active {
+    right: -100%;
+  }
+  .menu__list {
+    gap: 15px 15px;
+    flex-direction: column;
+    padding: 100px 100px;
+    top: 0;
+    right: 0;
+  }
+  .menu__list > li {
+    font-size: 35px;
+    line-height: 75px;
+    margin: 0 auto;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----HERO----------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.page {
+  flex: 1 1 auto;
+}
+.page__hero {
+  position: relative;
+}
+.hero {
+  &__body {
+    padding: 250px 0px 330px 80px;
+    position: relative;
+    z-index: 2;
+    max-width: 490px;
+  }
+  &__title {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 200%;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 200%;
+    margin-bottom: 25px;
+  }
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    @media (max-width: 545px) {
+      img {
+        object-position: 60% 30%;
+      }
+    }
+  }
+  &__button {
+    max-width: 250px;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----SKILLS--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.skills {
+  &__title {
+    max-width: 230px;
+  }
+  &__body {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__column {
+    flex: 0 1 25%;
+    text-align: center;
+    gap: 20px;
+    @media (max-width: 1238px) {
+      flex: 0 1 50%;
+    }
+    @media (max-width: 686px) {
+      flex: 0 1 100%;
+    }
+  }
+}
+
+.item-skill {
+  padding: 20px;
+  height: 100%;
+
+  &__icon {
+    margin-bottom: 50px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 200%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 200%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----PORTFOLIO-----------------------------------------------*/
+/*-------------------------------------------------------------*/
+.portfolio {
+  &__title {
+    max-width: 290px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 900px;
+    margin-bottom: 60px;
+    gap: 5px 5px;
+  }
+  &__button {
+    width: 220px;
+    border: 2px solid $gold-color;
+    background-color: inherit;
+    color: $gold-color;
+    &:active {
+      color: $black-color;
+      background: $gold-color;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 15px;
+  }
+
+  &__column {
+    flex: 0 1 33%;
+    max-width: 450px;
+    @media (max-width: 1390px) {
+      flex: 0 1 50%;
+    }
+    display: flex;
+    justify-content: center;
+  }
+}
+
+body.light-theme {
+  & .portfolio__button-active {
+    background-color: $gold-color;
+    color: $white-color;
+  }
+}
+body.dark-theme {
+  & .portfolio__button-active {
+    background-color: $gold-color;
+    color: $black-color;
+  }
+}
+/*-------------------------------------------------------------*/
+/*-----VIDEO---------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.page__video {
+  position: relative;
+}
+
+.video {
+  &__title {
+    max-width: 240px;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    min-height: 705px;
+    display: flex;
+    justify-content: center;
+    background: url(../assets/img/video-player.jpg) no-repeat center;
+    background-position-x: 29%;
+  }
+  &__play-button {
+    background-color: transparent;
+  }
+  /*
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }*/
+}
+/*-------------------------------------------------------------*/
+/*-----PRICE---------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.price {
+  padding-bottom: 100px;
+
+  &__title {
+    max-width: 180px;
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px 20px;
+  }
+  &__column {
+    flex: 0 1 33%;
+    @media (max-width: 1385px) {
+      flex: 0 1 50%;
+    }
+    border: 3px solid $gold-color;
+    text-align: center;
+    padding: 43px 0px;
+    min-height: 505px;
+    max-width: 450px;
+  }
+}
+
+.item-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__title {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 200%;
+    margin-bottom: 20px;
+  }
+  &__cost {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 200%;
+    color: $gold-color;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 200%;
+    color: $white-color;
+    margin-bottom: 40px;
+  }
+  &__button {
+    margin: 0 auto;
+    padding: 8px 26px;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----CONTACTS------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.contacts {
+  position: relative;
+
+  &__body {
+    padding: 60px 20px 195px 0px;
+    position: relative;
+    z-index: 2;
+    min-height: 445px;
+    max-width: 450px;
+    margin: 0 0 0 auto;
+  }
+
+  &__title {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 200%;
+    color: $gold-color;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 5px 0px 5px 20px;
+    margin-bottom: 20px;
+    min-height: 50px;
+    border: 2px solid $gold-color;
+    background: transparent;
+    color: $gold-color;
+    font-size: 20px;
+    line-height: 200%;
+  }
+
+  &__textarea {
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    padding: 8px 40px;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    img {
+      object-position: 20% 50%;
+    }
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----FOOTER--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.footer {
+  background-color: $black-color;
+  &__body {
+    color: $white-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
