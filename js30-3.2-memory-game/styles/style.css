@@ -1,0 +1,322 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-----The Foundation------------------------------------------*/
+/*-------------------------------------------------------------*/
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  background: #1a5c7f;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Technical classes---------------------------------------*/
+/*-------------------------------------------------------------*/
+._container {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+._wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Memory game---------------------------------------------*/
+/*-------------------------------------------------------------*/
+.results {
+  margin: 0px auto 15px auto;
+  text-align: center;
+}
+
+.moves {
+  margin-top: 20px;
+  font-size: 35px;
+  padding: 5px 20px;
+  color: white;
+}
+
+.memory-list {
+  padding: 0px 10px;
+  margin-bottom: 20px;
+  width: 800px;
+  height: 800px;
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 5px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.memory-card {
+  border-radius: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  background: linear-gradient(45deg, #fff1eb, #ace0f9);
+}
+
+.memory-card:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.memory-card.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.memory-card.right {
+  background-color: #80d0c7;
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front-face {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/*-------------------------------------------------------------*/
+/*-----End game------------------------------------------------*/
+/*-------------------------------------------------------------*/
+.endgame {
+  background: linear-gradient(45deg, #a7a6cb, #8989ba);
+  display: none;
+  border-radius: 10px;
+  padding: 15px 0px 15px 0px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-top: -200px;
+  margin-left: -160px;
+  color: white;
+}
+
+.endgame__text {
+  padding: 5px 10px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.endgame__reset {
+  border-radius: 10px;
+  border: 3px solid #6380c4;
+  background: linear-gradient(45deg, #fff1eb, #ace0f9);
+  font-size: 25px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto 30px auto;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: transform(0.5s), transform(0.5s);
+  transition: transform(0.5s), transform(0.5s);
+  transition: transform(0.5s);
+}
+
+.endgame__reset:hover, .endgame__reset:focus {
+  -webkit-box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  -webkit-animation: endgame__reset 1s;
+          animation: endgame__reset 1s;
+}
+
+@-webkit-keyframes endgame__reset {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #6380c4;
+            box-shadow: 0 0 0 0 #6380c4;
+  }
+}
+
+@keyframes endgame__reset {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #6380c4;
+            box-shadow: 0 0 0 0 #6380c4;
+  }
+}
+
+.endgame__table {
+  width: 75%;
+  margin: 0 auto;
+  border: 2px solid #330867;
+  border-collapse: collapse;
+  padding: 50px;
+  text-align: center;
+}
+
+.endgame__table th {
+  font-size: 20px;
+  border-bottom: 3px solid black;
+  padding: 5px 0px;
+}
+
+.endgame__table td {
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  padding: 5px 0px;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Footer--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+.footer {
+  padding: 40px 0px;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px 20px;
+}
+
+.footer__item {
+  font-size: 25px;
+  color: white;
+}
+
+.footer__link {
+  font-size: 25px;
+  color: white;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.footer__link:hover {
+  color: rgba(52, 218, 255, 0.6);
+}
+/*# sourceMappingURL=style.css.map */

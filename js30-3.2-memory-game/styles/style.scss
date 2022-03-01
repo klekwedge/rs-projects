@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap");
+@import "_nullstyle";
+
+/*-------------------------------------------------------------*/
+/*-----The Foundation------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  background: rgb(26, 92, 127);
+}
+
+/*-------------------------------------------------------------*/
+/*-----Technical classes---------------------------------------*/
+/*-------------------------------------------------------------*/
+
+._container {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+._wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Memory game---------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.results {
+  margin: 0px auto 15px auto;
+  text-align: center;
+}
+.moves {
+  margin-top: 20px;
+  font-size: 35px;
+  padding: 5px 20px;
+  color: white;
+}
+
+.memory-list {
+  padding: 0px 10px;
+  margin-bottom: 20px;
+  width: 800px;
+  height: 800px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 5px;
+  perspective: 1000px;
+}
+
+.memory-card {
+  border-radius: 10px;
+  flex: 1 1 20%;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  background: linear-gradient(45deg, #fff1eb, #ace0f9);
+}
+
+.memory-card {
+  &:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+  &.flip {
+    transform: rotateY(180deg);
+  }
+  &.right {
+    background-color: #80d0c7;
+  }
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+/*-------------------------------------------------------------*/
+/*-----End game------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.endgame {
+  background: linear-gradient(45deg, #a7a6cb, #8989ba);
+  display: none;
+  border-radius: 10px;
+  padding: 15px 0px 15px 0px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-top: -200px;
+  margin-left: -160px;
+  color: white;
+  &__text {
+    padding: 5px 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__reset {
+    border-radius: 10px;
+    border: 3px solid #6380c4;
+    background: linear-gradient(45deg, #fff1eb, #ace0f9);
+    font-size: 25px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto 30px auto;
+    transform: scale(1);
+    transition: transform(0.5s);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+      animation: endgame__reset 1s;
+    }
+    @keyframes endgame__reset {
+      0% {
+        box-shadow: 0 0 0 0 #6380c4;
+      }
+    }
+  }
+}
+
+.endgame__table {
+  width: 75%;
+  margin: 0 auto;
+  border: 2px solid #330867;
+  border-collapse: collapse;
+  padding: 50px;
+  text-align: center;
+}
+.endgame__table th {
+  font-size: 20px;
+  border-bottom: 3px solid black;
+  padding: 5px 0px;
+}
+.endgame__table td {
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  padding: 5px 0px;
+}
+
+/*-------------------------------------------------------------*/
+/*-----Footer--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.footer {
+  padding: 40px 0px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 20px;
+  }
+  &__item {
+    font-size: 25px;
+    color: white;
+  }
+  &__link {
+    font-size: 25px;
+    color: white;
+    transition: all 0.2s ease-in;
+    &:hover {
+      color: rgba(52, 218, 255, 0.6);
+    }
+  }
+}
