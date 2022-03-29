@@ -224,6 +224,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 25px;
+  color: white;
 }
 
 .footer__link {
