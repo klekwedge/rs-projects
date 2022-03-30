@@ -181,7 +181,7 @@ body.dark-theme {
 .menu__theme-button {
   display: block;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   margin: 0 0 20px auto;
   border-radius: 50%;
   background-color: transparent;
@@ -269,6 +269,7 @@ body.dark-theme {
 
   .menu__body {
     transform: translate(-100%, 0px);
+    z-index: 5;
     overflow: auto;
     position: fixed;
     top: 0;

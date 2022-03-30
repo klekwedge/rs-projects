@@ -88,10 +88,10 @@ const i18Obj = {
     "send-message": "Отправить",
   },
 };
-console.log("Смена изображений в секции portfolio +25")
-console.log("Перевод страницы на два языка +25")
-console.log("Переключение светлой и тёмной темы +25")
-console.log("Итого: 75")
+console.log("Смена изображений в секции portfolio +25");
+console.log("Перевод страницы на два языка +25");
+console.log("Переключение светлой и тёмной темы +25");
+console.log("Итого: 75");
 
 function preloadImages(season) {
   for (let i = 1; i <= 6; i++) {
@@ -104,10 +104,12 @@ preloadImages("spring");
 preloadImages("summer");
 preloadImages("autumn");
 
-let sheet = document.querySelector(".sheet");
-let themeButton = document.querySelector(".menu__theme-button");
-let body = document.querySelector("body");
-let themeImage = document.querySelector(".theme-button-image");
+
+// Theme change
+const sheet = document.querySelector(".sheet");
+const themeButton = document.querySelector(".menu__theme-button");
+const body = document.querySelector("body");
+const themeImage = document.querySelector(".theme-button-image");
 
 themeButton.onclick = function () {
   sheet.classList.toggle("light-theme");
@@ -119,18 +121,20 @@ themeButton.onclick = function () {
   }
 };
 
-const rusLanguage = document.querySelector(".language__rus");
-const engLanguage = document.querySelector(".language__eng");
-const wordsTranslate = document.querySelectorAll("[data-i18]");
-const email = document.querySelector(".input__e-mail");
-const phone = document.querySelector(".input__phone");
-const textarea = document.querySelector(".input__textarea");
+const rusLanguage = document.querySelector(".language__rus"),
+  engLanguage = document.querySelector(".language__eng"),
+  wordsTranslate = document.querySelectorAll("[data-i18]"),
+  email = document.querySelector(".input__e-mail"),
+  phone = document.querySelector(".input__phone"),
+  textarea = document.querySelector(".input__textarea");
 
+
+// Language change
 rusLanguage.onclick = function () {
   email.placeholder = "Электронная почта";
   phone.placeholder = "Телефон";
   textarea.placeholder = "Сообщенние";
-  wordsTranslate.forEach(function (item, i, wordsTranslate) {
+  wordsTranslate.forEach(function (item) {
     item.textContent = i18Obj.ru[item.dataset.i18];
   });
   rusLanguage.classList.toggle("language__active");
@@ -148,6 +152,8 @@ engLanguage.onclick = function () {
   engLanguage.classList.toggle("language__active");
 };
 
+
+// Burger menu
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 if (iconMenu) {
@@ -169,21 +175,22 @@ for (let linkMenu of linksMenu) {
   };
 }
 
-
+// Portfolio section
 const portfolioButtons = document.querySelectorAll(".portfolio__button");
 const portfolioImage = document.querySelectorAll(".portfolio__item");
 
-
 for (let portfolioButton of portfolioButtons) {
-
   portfolioButton.onclick = function () {
-
-    const portfolioImageActive = document.querySelector(".portfolio__button-active");
+    const portfolioImageActive = document.querySelector(
+      ".portfolio__button-active"
+    );
     portfolioImageActive.classList.remove("portfolio__button-active");
     portfolioButton.classList.add("portfolio__button-active");
 
     for (let i = 1, j = 0; i <= 6, j < 6; i++, j++) {
-      portfolioImage[j].src = `assets/img/${portfolioButton.dataset.season}/${i}.jpg`;
+      portfolioImage[
+        j
+      ].src = `assets/img/${portfolioButton.dataset.season}/${i}.jpg`;
     }
   };
 }
