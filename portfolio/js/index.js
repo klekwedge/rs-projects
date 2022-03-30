@@ -88,10 +88,7 @@ const i18Obj = {
     "send-message": "Отправить",
   },
 };
-console.log("Смена изображений в секции portfolio +25");
-console.log("Перевод страницы на два языка +25");
-console.log("Переключение светлой и тёмной темы +25");
-console.log("Итого: 75");
+
 
 function preloadImages(season) {
   for (let i = 1; i <= 6; i++) {
