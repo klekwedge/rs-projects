@@ -1,5 +1,5 @@
 @import "_nullstyle";
-
+@import "_clock";
 body {
   background: #d5d6d2;
 }
@@ -15,6 +15,11 @@ span.material-icons-outlined {
   color: white;
   font-size: 30px;
 }
+
+._container{
+max-width: 1200px;
+margin:  0 auto;
+}
 /*-------------------------------------------------------------*/
 /*-----Header--------------------------------------------------*/
 /*-------------------------------------------------------------*/
@@ -24,8 +29,6 @@ span.material-icons-outlined {
   margin-bottom: 50px;
   &__container {
     padding: 20px 10px;
-    max-width: 1300px;
-    margin: 0 auto;
   }
   &__title {
     color: white;
@@ -38,31 +41,34 @@ span.material-icons-outlined {
 /*-------------------------------------------------------------*/
 
 .quote__container {
-  margin: 0 auto;
-  max-width: 1250px;
   background-color: #2f2e33;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 40px;
-  min-height: 250px;
+  min-height: 400px;
+  position: relative;
 }
 
 .quote__container p {
-  display: inline-block;
   position: relative;
   font-size: 40px;
   color: white;
-  margin-bottom: 40px;
+  text-align: center;
+  margin: 0 auto 60px auto;
+}
 
-  &:last-child {
-    margin-bottom: 0px;
-    display: block;
-    text-align: center;
-  }
+p.quote__statement {
+  line-height: 130%;
+}
+
+p.quote__author {
+  display: block;
+  text-align: center;
+  margin-bottom: 0px;
 }
 
 .quote__author::after {
   content: "";
-  background: #DC143C no-repeat;
+  background: #dc143c no-repeat;
   position: absolute;
   width: 50%;
   height: 5px;
@@ -71,6 +77,26 @@ span.material-icons-outlined {
   transform: translateX(-50%);
 }
 
+.quote__button {
+  display: block;
+  margin: 0 0 0 auto;
+  padding: 20px 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 25px;
+  border-radius: 3px;
+  background-color: #ebedf0;
+  transition: 0.5s;
+  &:hover {
+    background-color: black;
+    color: #ebedf0;
+  }
+  // a:link { ... }
+  // a:visited { ... }
+  // a:hover { ... }
+  // a:active { ... }
+}
 /*-------------------------------------------------------------*/
 /*-----Footer--------------------------------------------------*/
 /*-------------------------------------------------------------*/

@@ -30,7 +30,7 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="header__container">
+      <div class="header__container _container">
         <h1 class="header__title">Quotes <span class="material-icons-outlined">
             format_quote
           </span></h1>
@@ -38,10 +38,29 @@
     </header>
 
     <main class="page">
-      <section class="page__quote">
-        <div class="quote__container">
+      <section class="page__clock clock">
+        <div class="clock__container _container">
+          <ul class="clock__date date">
+            <li class="date__item date__hours">
+              <div></div>
+              <div>Часы</div>
+            </li>
+            <li class="date__item date__minutes">
+              <div></div>
+              <div>Минуты</div>
+            </li>
+            <li class="date__item date__seconds">
+              <div></div>
+              <div>Секунды</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="page__quote qoute">
+        <div class="quote__container _container">
           <p class="quote__statement"></p>
           <p class="quote__author"></p>
+          <button class="quote__button">New quote</button>
         </div>
       </section>
 
@@ -55,7 +74,7 @@
     </footer>
 
   </div>
-  <script src="script.js"></script>
+  <script src="dist/bundle.js"></script>
 </body>
 
 </html>
