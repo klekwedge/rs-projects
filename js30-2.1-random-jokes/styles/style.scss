@@ -1,0 +1,128 @@
+@import "_nullstyle";
+@import "_clock";
+body {
+  background: #d5d6d2;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+span.material-icons-outlined {
+  color: white;
+  font-size: 30px;
+}
+
+._container{
+max-width: 1200px;
+margin:  0 auto;
+}
+/*-------------------------------------------------------------*/
+/*-----Header--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.header {
+  background: #3a5199;
+  margin-bottom: 50px;
+  &__container {
+    padding: 20px 10px;
+  }
+  &__title {
+    color: white;
+    font-size: 40px;
+  }
+}
+
+/*-------------------------------------------------------------*/
+/*-----Page----------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.quote__container {
+  background-color: #2f2e33;
+  border-radius: 8px;
+  padding: 40px;
+  min-height: 400px;
+  position: relative;
+}
+
+.quote__container p {
+  position: relative;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin: 0 auto 60px auto;
+}
+
+p.quote__statement {
+  line-height: 130%;
+}
+
+p.quote__author {
+  display: block;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.quote__author::after {
+  content: "";
+  background: #dc143c no-repeat;
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quote__button {
+  display: block;
+  margin: 0 0 0 auto;
+  padding: 20px 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 25px;
+  border-radius: 3px;
+  background-color: #ebedf0;
+  transition: 0.5s;
+  &:hover {
+    background-color: black;
+    color: #ebedf0;
+  }
+  // a:link { ... }
+  // a:visited { ... }
+  // a:hover { ... }
+  // a:active { ... }
+}
+/*-------------------------------------------------------------*/
+/*-----Footer--------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.footer {
+  padding: 20px 0px;
+  &__container {
+    margin: 0 auto;
+    padding: 0px 5px;
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 25px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+  &__link {
+    color: black;
+    &:hover {
+      color: #3a5199;
+    }
+  }
+
+  &__image {
+    width: 100px;
+  }
+}
