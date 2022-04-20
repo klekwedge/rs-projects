@@ -1,10 +1,9 @@
+'use strict';
+
 function clock() {
   const timeHours = document.querySelector(".date__hours div");
   const timeMinutes = document.querySelector(".date__minutes div");
   const timeSeconds = document.querySelector(".date__seconds div ");
-
-  
-
 
   function getTime() {
     const date = new Date();
@@ -20,7 +19,6 @@ function clock() {
 
   setInterval(() => {
     const newTime = getTime();
-    console.log(newTime.toTimeString());
     timeHours.textContent = dateColon(newTime.getHours());
     timeMinutes.textContent = dateColon(newTime.getMinutes());
     timeSeconds.textContent = dateColon(newTime.getSeconds());
