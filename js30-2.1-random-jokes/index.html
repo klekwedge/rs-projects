@@ -40,25 +40,39 @@
     <main class="page">
       <section class="page__clock clock">
         <div class="clock__container _container">
-          <ul class="clock__date date">
-            <li class="date__item date__hours">
-              <div>00</div>
-              <div>Часы</div>
-            </li>
-            <li class="date__item date__minutes">
-              <div>00</div>
-              <div>Минуты</div>
-            </li>
-            <li class="date__item date__seconds">
-              <div>00</div>
-              <div>Секунды</div>
-            </li>
-          </ul>
+          <div class="clock__time time">
+            <div class="time__circle">
+              <div class="time__dot hour_dot"></div>
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="hh"></circle>
+              </svg>
+              <div id="hours">00</div>
+            </div>
+            <div class="time__circle">
+              <div class="time__dot min_dot"></div>
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="mm"></circle>
+              </svg>
+              <div id="minutes">00</div>
+            </div>
+            <div class="time__circle">
+              <div class="time__dot sec_dot"></div>
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="ss"></circle>
+              </svg>
+              <div id="seconds">00</div>
+            </div>
+          </div>
         </div>
       </section>
+
       <section class="page__quote qoute">
         <div class="quote__container _container">
-          <p class="quote__statement">Very little is needed to make a happy life; it is all within yourself, in your way of thinking.</p>
+          <p class="quote__statement">Very little is needed to make a happy life; it is all within yourself, in your way
+            of thinking.</p>
           <p class="quote__author">Marcus Aurelius</p>
           <button class="quote__button">New quote</button>
         </div>

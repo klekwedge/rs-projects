@@ -1,57 +1,109 @@
 .page__clock {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.clock__container > * {
-  max-width: 500px;
-  margin: 0 0 0 auto;
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-}
-
-.date {
+.clock__time {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 5px 10px;
-  &__item {
-    display: flex;
-    flex: 1 1 30%;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #2295f5;
-    border-radius: 5px;
-    color: white;
-    &:nth-child(3) {
-      background-color: #fe006b;
-      & div:last-child {
-        background-color: #e60061;
-      }
-    }
+  gap: 40px;
+  margin: 0 0 0 auto;
+  color: white;
+  max-width: 650px;
+  padding: 30px 10px;
+  border-radius: 5px;
+  background-color: #313641;
+}
 
-    &:last-child{
-        background-color: #fe006b;
-        & div:last-child {
-          background-color: #e60061;
-        }
-      }
+.clock__time .time__circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    & div:first-child {
-      width: 100%;
-      padding: 20px 0px 20px 0px;
-      font-size: 40px;
-      border-bottom: 2px solid black;
-      text-align: center;
-    }
+.clock__time .time__circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
 
-    & div:last-child {
-      width: 100%;
-      background-color: #1478ce;
-      padding: 10px 20px 10px 20px;
-      font-size: 20px;
-      text-transform: uppercase;
-      text-align: center;
-    }
-  }
+.clock__time .time__circle svg circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: #191919;
+  stroke-width: 4;
+  transform: translate(5px, 5px);
+}
+
+.clock__time .time__circle:first-child svg circle:nth-child(2) {
+  stroke: #ff2972;
+}
+
+.clock__time .time__circle:nth-child(2) svg circle:nth-child(2) {
+  stroke: #fee800;
+}
+.clock__time .time__circle:nth-child(3) svg circle:nth-child(2) {
+  stroke: #04fc43;
+}
+
+.clock__time .time__circle svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+}
+
+.clock__time div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.clock__time div span {
+  position: absolute;
+  transform: translateX(-50%) translateY(10px);
+  font-size: 0.35em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+.time__dot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.time__dot::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.time__circle:first-child .time__dot::before {
+  background: #ff2972;
+  box-shadow: 0 0 20px #ff2972, 0 0 60px #ff2972;
+}
+
+
+.time__circle:nth-child(2) .time__dot::before {
+  background: #fee800;
+  box-shadow: 0 0 20px #fee800, 0 0 60px #fee800;
+}
+
+.time__circle:nth-child(3) .time__dot::before {
+  background: #04fc43;
+  box-shadow: 0 0 20px #04fc43, 0 0 60px #04fc43;
 }
