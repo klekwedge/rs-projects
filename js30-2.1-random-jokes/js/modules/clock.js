@@ -35,9 +35,9 @@ function clock() {
     minutes.innerHTML = m + "<br><span>Минуты</span>";
     seconds.innerHTML = s + "<br><span>Секунды</span>";
 
-    hourStep.style.strokeDashoffset = 440 - (440 * h) / 24;
-    minuteStep.style.strokeDashoffset = 440 - (440 * m) / 60;
-    secondStep.style.strokeDashoffset = 440 - (440 * s) / 60;
+    hourStep.style.strokeDashoffset = 585.2 - (585.2 * h) / 24;
+    minuteStep.style.strokeDashoffset = 585.2 - (585.2 * m) / 60;
+    secondStep.style.strokeDashoffset = 585.2 - (585.2 * s) / 60;
 
     hourDot.style.transform = `rotate(${h * 15}deg)`;
     minDot.style.transform = `rotate(${m * 6}deg)`;

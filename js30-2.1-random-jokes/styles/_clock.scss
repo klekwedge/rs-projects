@@ -9,16 +9,16 @@
   gap: 40px;
   margin: 0 0 0 auto;
   color: white;
-  max-width: 650px;
-  padding: 30px 10px;
+  max-width: 750px;
+  padding: 30px 10px 20px 10px;
   border-radius: 5px;
   background-color: #313641;
 }
 
 .clock__time .time__circle {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,8 +26,8 @@
 
 .clock__time .time__circle svg {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   transform: rotate(270deg);
 }
 
@@ -53,14 +53,15 @@
 }
 
 .clock__time .time__circle svg circle:nth-child(2) {
-  stroke-dasharray: 440;
+  stroke-dasharray: 585.2;
 }
 
 .clock__time div {
   position: absolute;
   text-align: center;
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  transform: translateY(-10px);
 }
 
 .clock__time div span {
@@ -86,7 +87,7 @@
 .time__dot::before {
   content: "";
   position: absolute;
-  top: -3px;
+  top: 0px;
   width: 15px;
   height: 15px;
   border-radius: 50%;

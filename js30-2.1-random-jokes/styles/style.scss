@@ -16,10 +16,10 @@ span.material-icons-outlined {
   font-size: 30px;
 }
 
-._container{
-max-width: 1200px;
-margin:  0 auto;
-padding: 0 10px;
+._container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 /*-------------------------------------------------------------*/
 /*-----Header--------------------------------------------------*/
@@ -40,7 +40,10 @@ padding: 0 10px;
 /*-------------------------------------------------------------*/
 /*-----Page----------------------------------------------------*/
 /*-------------------------------------------------------------*/
-
+.page{
+  flex: 1 1 auto;
+  margin-bottom: 50px;
+}
 .quote__container {
   background-color: #2f2e33;
   color: white;
@@ -71,7 +74,6 @@ p.quote__author {
   content: "";
   background: #dc143c no-repeat;
   position: absolute;
-  // width: calc(300px + (400 - 300) * ((100vw - 320px) / (1280 - 320)));
   width: 60%;
   @media (max-width: 600px) {
     width: 90%;
@@ -103,7 +105,8 @@ p.quote__author {
 /*-------------------------------------------------------------*/
 
 .footer {
-  padding: 20px 0px;
+  color: black;
+  padding: 30px 0px;
   &__container {
     margin: 0 auto;
     padding: 0px 5px;
@@ -117,45 +120,14 @@ p.quote__author {
     font-size: 25px;
   }
   &__link {
-    color: black;
+    color: inherit;
+    transition: 0.4s;
     &:hover {
-      color: #3a5199;
+      color: rgb(0, 72, 255);
     }
   }
 
   &__image {
     width: 100px;
-  }
-}
-
-
-.tracking-in-expand {
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-
- @-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
   }
 }
