@@ -18,7 +18,11 @@ function quote() {
   const showData = function (data) {
     const num = Math.floor(Math.random() * data.length);
     quoteStatement.textContent = data[num].text;
-    quoteAuthor.textContent = data[num].author;
+    if (data[num].author === null) {
+      quoteAuthor.textContent = "Unknown author";
+    } else {
+      quoteAuthor.textContent = data[num].author;
+    }
   };
 
   getData();
