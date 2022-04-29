@@ -222,7 +222,7 @@ h6 {
           flex: 1 0 25%;
 }
 
-.movie__main {
+.movie {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,7 +239,7 @@ h6 {
   cursor: pointer;
 }
 
-.movie__main:hover {
+.movie:hover {
   -webkit-box-shadow: 0px 0px 0px 3px #fdfdfd;
           box-shadow: 0px 0px 0px 3px #fdfdfd;
 }
@@ -275,20 +275,11 @@ h6 {
   background-color: #22254b;
 }
 
-/*
-.movie__substrate {
-  display: none;
-  position: absolute;
- // z-index: 5;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-}*/
 .movie__detail {
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -381,4 +372,3 @@ h6 {
 .footer__image {
   width: 100px;
 }
-/*# sourceMappingURL=style.css.map */

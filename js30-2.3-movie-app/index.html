@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image-galery</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-  </head>
-  <body>
-    <div class="_wrapper">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image-galery</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="_wrapper">
     <header class="header">
       <div class="header__container">
         <div class="header__content">
@@ -33,62 +35,61 @@
           <h1 class="header__title">Movie App</h1>
         </div>
         <div class="header__block-search">
-          <input placeholder="Enter some text here" class="header__input"  maxlength="36" autofocus autocomplete="off"/>
-          <button  class="header__reset"><img src="assets/svg/clear_black_24dp.svg"></button>
+          <input placeholder="Enter some text here" class="header__input" maxlength="36" autofocus autocomplete="off" />
+          <button class="header__reset"><img src="assets/svg/clear_black_24dp.svg"></button>
           <button class="header__search"><img src="assets/svg/search_white_24dp.svg"></button>
         </div>
-      
+
       </div>
     </header>
     <main class="page">
       <div class="page__container">
-          <ul class="page__list">
-          </ul>
+        <ul class="page__list">
+        </ul>
       </div>
     </main>
 
     <footer class="footer">
       <div class="footer__container">
-          <span>© 2022 by Andrey Antonov</span>
-          <a
-            class="footer__link"
-            href="https://github.com/klekwedge"
-            target="_blank"
-            >GitHub</a
-          >
+        <span>© 2022 by Andrey Antonov</span>
+        <a class="footer__link" href="https://github.com/klekwedge" target="_blank">GitHub</a>
       </div>
     </footer>
   </div>
 
   <template id="card__movie">
     <li class="page__item movie">
-        <div class="movie__main">
-          <img class="movie__image">
-          <div class="movie__content">
-            <h2 class="movie__title"></h2>
-            <p class="movie__rating"></p>
-          </div>
-        </div>
-        <!---<div class="movie__substrate">-->
-          <div class="movie__detail">
-            <img class="movie__image">
-            <div class="movie__info info">
-              <h3 class="info__title"></h3>
-              <h4 class="info__subtitle">About movie:</h4>
-              <p class="info__rating"></p>
-              <p class="info__rating-count"></p>
-              <p class="info__popularity"></p>
-              <p class="info__release"></p>
-              <p class="info__genre"></p>
-              <p class="info__language"></p>
-              <h4 class="info__subtitle">Description:</h4>
-              <p class="info__overview"></p>
-            </div>
-          </div>
-        <!---</div>-->
+
+      <img class="movie__image">
+      <div class="movie__content">
+        <h2 class="movie__title"></h2>
+        <p class="movie__rating"></p>
+      </div>
+
     </li>
   </template>
 
-    <script src="js/script.js"></script>
-  </body>
+  <template id="modal__movie">
+    <div class="movie__overlay">
+      <div class="movie__detail">
+        <img class="movie__image">
+        <div class="movie__info info">
+          <h3 class="info__title"></h3>
+          <h4 class="info__subtitle">About movie:</h4>
+          <p class="info__rating"></p>
+          <p class="info__rating-count"></p>
+          <p class="info__popularity"></p>
+          <p class="info__release"></p>
+          <p class="info__genre"></p>
+          <p class="info__language"></p>
+          <h4 class="info__subtitle">Description:</h4>
+          <p class="info__overview"></p>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="js/bundle.js"></script>
+</body>
+
 </html>
