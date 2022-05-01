@@ -104,6 +104,7 @@ typings/
 .tern-port
 
 
-## ## ## ## ##
-webpack.config.js
+# Assemblers and task runners
+gulp
+gulpfile.js
 package-lock.json

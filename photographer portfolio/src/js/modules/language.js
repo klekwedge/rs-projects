@@ -1,5 +1,5 @@
 "use strict";
-import i18Obj from "./translate";
+import i18Obj from "./translate.js";
 
 function languageChange() {
   const rusLanguage = document.querySelector(".language__rus"),
