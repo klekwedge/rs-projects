@@ -103,8 +103,10 @@ typings/
 # TernJS port file
 .tern-port
 
+# NPM
+package-lock.json
 
 # Assemblers and task runners
 gulp
 gulpfile.js
-package-lock.json
+webpack.config.js
