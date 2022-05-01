@@ -78,6 +78,9 @@ function createMovieModal(newMovie) {
   const movieModalWrapper = movieModalTemplate.querySelector(".movie__overlay");
   movieModalWrapper.classList.add("movie__overlay");
 
+  const movieClose = movieModalTemplate.querySelector(".modal__close");
+  movieClose.classList.add("modal__close");
+
   const movieModal = movieModalTemplate.querySelector(".movie__modal");
   movieModal.classList.add("movie__modal");
 
@@ -123,14 +126,28 @@ function createMovieModal(newMovie) {
   const overviewMovie = movieModalTemplate.querySelector(".info__overview");
   overviewMovie.textContent = newMovie.overview;
 
-
   movieModalWrapper.style.display = "block";
-  movieModalWrapper.addEventListener("click", () => {
-    // movieModalWrapper.style.display = "none";
-    movieList.removeChild(movieModalWrapper);
-    document.body.classList.remove("_lock");
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMovieModal();
+    }
   });
 
+  movieModalWrapper.addEventListener("click", (event) => {
+    if (event.target === movieModalWrapper) {
+      closeMovieModal();
+    }
+  });
+
+  movieClose.addEventListener("click", (event) => {
+    closeMovieModal();
+  });
+
+  function closeMovieModal() {
+    movieList.removeChild(movieModalWrapper);
+    document.body.classList.remove("_lock");
+  }
   movieList.appendChild(movieModalWrapper);
 }
 /*-------------------------------------------------------------*/

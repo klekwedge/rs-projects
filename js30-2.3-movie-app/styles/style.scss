@@ -151,6 +151,7 @@ body._lock {
   background: rgba(0, 0, 0, 0.6);
 }
 
+
 .movie__modal {
   width: 100%;
   position: absolute;
@@ -194,6 +195,20 @@ body._lock {
     font-size: 20px;
     color: white;
     margin-bottom: 10px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: 0.4s;
+  filter: invert(40%);
+  &:hover {
+    filter: invert(0%);
   }
 }
 
