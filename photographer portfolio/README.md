@@ -1,4 +1,4 @@
-## [Landing page portfolio photographer](https://klekwedge.github.io/rs-projects/photographer/portfolio/dist)
+## [Landing page portfolio photographer](https://klekwedge.github.io/rs-projects/photographer%20portfolio/dist/)
 
 - Плавная прокрутка по якорям.
 - Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется не обрезается и не удаляется.
