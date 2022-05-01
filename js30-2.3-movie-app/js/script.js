@@ -9,7 +9,7 @@ const inputNameMovie = document.querySelector(".header__input");
 
 const resetButton = document.querySelector(".header__reset");
 const searchButton = document.querySelector(".header__search");
-const homepageButton = document.querySelector(".header__image");
+const homepageButton = document.querySelector(".header__logo");
 
 let url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1`;
 getData();

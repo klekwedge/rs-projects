@@ -34,8 +34,10 @@
     <header class="header">
       <div class="header__container">
         <div class="header__content">
-          <img class="header__image" src="assets/svg/movie_white_24dp.svg" width="40"></img>
-          <h1 class="header__title">Movie App</h1>
+          <div class="header__logo">
+            <img class="header__image" src="assets/svg/movie_white_24dp.svg" width="40"></img>
+            <h1 class="header__title">Movie App</h1>
+          </div>
         </div>
         <div class="header__block-search">
           <input placeholder="Enter some text here" class="header__input" maxlength="36" autofocus autocomplete="off" />
@@ -72,7 +74,7 @@
 
   <template id="modal__movie">
     <div class="movie__overlay">
-      <div class="movie__modal"> 
+      <div class="movie__modal">
         <img class="modal__close" src="./assets/svg/close_icon.svg">
         <img class="movie__image">
         <div class="movie__info info">
