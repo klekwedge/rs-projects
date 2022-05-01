@@ -20,7 +20,6 @@ getData();
 async function getData() {
   const res = await fetch(url);
   const data = await res.json();
-  console.log(data);
   showData(data);
 }
 
@@ -52,7 +51,6 @@ const createMovieCard = function (newMovie) {
   const titleMovie = tempInstance.querySelector(".movie__title");
   titleMovie.textContent = newMovie.title;
 
-
   const ratingMovie = tempInstance.querySelector(".movie__rating");
 
   ratingMovie.textContent = newMovie.vote_average;
@@ -65,23 +63,23 @@ const createMovieCard = function (newMovie) {
     ratingMovie.style.color = "#FB0007";
   }
 
-  movieList.appendChild(movieItem);
-
-  createMovieModal(newMovie);
-
-  movieItem.addEventListener("click", function () {
-    
+  movieItem.addEventListener("click", () => {
+    document.body.classList.add("_lock");
+    createMovieModal(newMovie);
   });
 
-
+  movieList.appendChild(movieItem);
 };
 
 function createMovieModal(newMovie) {
   const templateModalMovie = document.querySelector("#modal__movie").content;
   const movieModalTemplate = templateModalMovie.cloneNode(true);
-  const movieItem = movieModalTemplate.querySelector(".movie__overlay");
-  movieItem.classList.add('movie__detail');
 
+  const movieModalWrapper = movieModalTemplate.querySelector(".movie__overlay");
+  movieModalWrapper.classList.add("movie__overlay");
+
+  const movieModal = movieModalTemplate.querySelector(".movie__modal");
+  movieModal.classList.add("movie__modal");
 
   const imageMovie = movieModalTemplate.querySelector(".movie__image");
 
@@ -97,7 +95,7 @@ function createMovieModal(newMovie) {
 
   const ratingMovie = movieModalTemplate.querySelector(".info__rating");
 
-  ratingMovie.textContent = newMovie.vote_average;
+  ratingMovie.textContent = `Rating: ${newMovie.vote_average}`;
 
   if (newMovie.vote_average >= 7) {
     ratingMovie.style.color = "#3BB33B";
@@ -124,18 +122,13 @@ function createMovieModal(newMovie) {
 
   const overviewMovie = movieModalTemplate.querySelector(".info__overview");
   overviewMovie.textContent = newMovie.overview;
-  
 
-  movieList.appendChild(movieItem);
+  movieModalWrapper.addEventListener("click", () => {
+    movieModalWrapper.style.display = "none";
+    document.body.classList.remove("_lock");
+  });
 
-  // mainmovie.addEventListener("click", function () {
-  //   // infoMovie.style.top = `${movieItem.offsetTop}px`;
-  //   // infoMovie.style.display = "flex";
-  // });
-
-  // infoMovie.addEventListener("click", function () {
-  //   infoMovie.style.display = "none";
-  // });
+  movieList.appendChild(movieModalWrapper);
 }
 /*-------------------------------------------------------------*/
 /*-----Event listeners-----------------------------------------*/
