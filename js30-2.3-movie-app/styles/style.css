@@ -280,6 +280,7 @@ body._lock {
 }
 
 .movie__overlay {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;

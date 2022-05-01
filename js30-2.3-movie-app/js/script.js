@@ -123,8 +123,11 @@ function createMovieModal(newMovie) {
   const overviewMovie = movieModalTemplate.querySelector(".info__overview");
   overviewMovie.textContent = newMovie.overview;
 
+
+  movieModalWrapper.style.display = "block";
   movieModalWrapper.addEventListener("click", () => {
-    movieModalWrapper.style.display = "none";
+    // movieModalWrapper.style.display = "none";
+    movieList.removeChild(movieModalWrapper);
     document.body.classList.remove("_lock");
   });
 
