@@ -293,6 +293,7 @@ body._lock {
 
 .movie__modal {
   width: 100%;
+  max-width: 730px;
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -307,30 +308,52 @@ body._lock {
           justify-content: center;
   gap: 20px 20px;
   background: #22254b;
-  padding: 15px;
   border-radius: 10px;
-  max-width: 800px;
+}
+
+@media (max-width: 800px) {
+  .movie__modal {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 425px) {
+  .movie__modal {
+    max-width: 300px;
+    padding: 0px 10px;
+  }
 }
 
 .movie__modal .movie__image {
-  width: 50%;
-  border-radius: 10px;
+  width: 100%;
+}
+
+.movie__info {
+  padding: 15px 15px 0px 0px;
+}
+
+@media (max-width: 800px) {
+  .movie__info {
+    padding: 15px 15px 0px 15px;
+  }
 }
 
 .movie__info h3 {
   text-align: center;
   color: white;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-weight: 700;
 }
 
 .movie__info h4 {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 24px;
   color: white;
-  margin: 10px 0px;
+  margin: 15px 0px;
 }
 
 .movie__info p {
