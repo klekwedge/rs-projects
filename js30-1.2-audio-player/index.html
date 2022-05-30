@@ -105,7 +105,6 @@
               min="0"
               max="100"
               value="0"
-              oninput="changeProgressBar()"
             />
             <div class="progress__show">
               <p class="progress__current">0:00</p>
@@ -113,29 +112,28 @@
             </div>
           </div>
           <div class="audio__control control">
-            <button class="audio__auto" onclick="autoplaySwitch()">
+            <button class="audio__auto">
               <i class="fa-solid fa-repeat"></i>
             </button>
-            <button onclick="previous_song()" class="control__previous">
+            <button class="control__previous">
               <i class="fa-solid fa-backward-step"></i>
             </button>
-            <button onclick="justplay()" class="control__play">
+            <button class="control__play">
               <i class="fa-solid fa-play"></i>
             </button>
-            <button onclick="next_song()" class="control__next">
+            <button class="control__next">
               <i class="fa-solid fa-forward-step"></i>
             </button>
           </div>
 
           <div class="audio__volume volume">
-            <i class="fa-solid fa-volume-high" onclick="muteSound()"></i>
+            <i class="fa-solid fa-volume-high volume__mute"></i>
             <input
               class="volume__change"
               type="range"
               min="0"
               max="100"
               value="90"
-              oninput="changeVolume()"
             />
             <p class="volume__show">90</p>
           </div>
