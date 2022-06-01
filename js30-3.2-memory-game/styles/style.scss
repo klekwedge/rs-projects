@@ -34,6 +34,7 @@ body {
   margin: 0px auto 15px auto;
   text-align: center;
 }
+
 .moves {
   margin-top: 20px;
   font-size: 35px;
@@ -146,11 +147,13 @@ body {
   padding: 50px;
   text-align: center;
 }
+
 .endgame__table th {
   font-size: 20px;
   border-bottom: 3px solid black;
   padding: 5px 0px;
 }
+
 .endgame__table td {
   font-size: 16px;
   border-bottom: 2px solid black;
@@ -163,16 +166,19 @@ body {
 
 .footer {
   padding: 40px 0px;
+  
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px 20px;
   }
+
   &__item {
     font-size: 25px;
     color: white;
   }
+
   &__link {
     font-size: 25px;
     color: white;
