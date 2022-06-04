@@ -16,9 +16,10 @@ span.material-icons-outlined {
   font-size: 30px;
 }
 
-._container{
-max-width: 1200px;
-margin:  0 auto;
+._container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 /*-------------------------------------------------------------*/
 /*-----Header--------------------------------------------------*/
@@ -39,13 +40,16 @@ margin:  0 auto;
 /*-------------------------------------------------------------*/
 /*-----Page----------------------------------------------------*/
 /*-------------------------------------------------------------*/
-
+.page{
+  flex: 1 1 auto;
+  margin-bottom: 50px;
+}
 .quote__container {
   background-color: #2f2e33;
+  color: white;
   border-radius: 8px;
   padding: 40px;
-  min-height: 400px;
-  position: relative;
+  min-height: 450px;
 }
 
 .quote__container p {
@@ -63,14 +67,20 @@ p.quote__statement {
 p.quote__author {
   display: block;
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 40px;
 }
 
 .quote__author::after {
   content: "";
   background: #dc143c no-repeat;
   position: absolute;
-  width: 50%;
+  width: 60%;
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+  @media (max-width: 400px) {
+    width: 100%;
+  }
   height: 5px;
   top: -15px;
   left: 50%;
@@ -79,11 +89,8 @@ p.quote__author {
 
 .quote__button {
   display: block;
-  margin: 0 0 0 auto;
-  padding: 20px 40px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  margin: 0 0px 40px auto;
+  padding: 20px 30px;
   font-size: 25px;
   border-radius: 3px;
   background-color: #ebedf0;
@@ -92,17 +99,14 @@ p.quote__author {
     background-color: black;
     color: #ebedf0;
   }
-  // a:link { ... }
-  // a:visited { ... }
-  // a:hover { ... }
-  // a:active { ... }
 }
 /*-------------------------------------------------------------*/
 /*-----Footer--------------------------------------------------*/
 /*-------------------------------------------------------------*/
 
 .footer {
-  padding: 20px 0px;
+  color: black;
+  padding: 30px 0px;
   &__container {
     margin: 0 auto;
     padding: 0px 5px;
@@ -116,9 +120,10 @@ p.quote__author {
     font-size: 25px;
   }
   &__link {
-    color: black;
+    color: inherit;
+    transition: 0.4s;
     &:hover {
-      color: #3a5199;
+      color: rgb(0, 72, 255);
     }
   }
 

@@ -40,41 +40,54 @@
     <main class="page">
       <section class="page__clock clock">
         <div class="clock__container _container">
-          <ul class="clock__date date">
-            <li class="date__item date__hours">
-              <div>00</div>
-              <div>Часы</div>
-            </li>
-            <li class="date__item date__minutes">
-              <div>00</div>
-              <div>Минуты</div>
-            </li>
-            <li class="date__item date__seconds">
-              <div>00</div>
-              <div>Секунды</div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="page__quote qoute">
-        <div class="quote__container _container">
-          <p class="quote__statement">Very little is needed to make a happy life; it is all within yourself, in your way of thinking.</p>
-          <p class="quote__author">Marcus Aurelius</p>
-          <button class="quote__button">New quote</button>
+          <div class="clock__time time">
+            <div class="time__circle">
+              <div class="time__dot hour_dot"></div>
+              <svg>
+                <circle cx="93.1" cy="93.1" r="93.1"></circle>
+                <circle cx="93.1" cy="93.1" r="93.1" id="hh"></circle>
+              </svg>
+              <div id="hours">00</div>
+            </div>
+            <div class="time__circle">
+              <div class="time__dot min_dot"></div>
+              <svg>
+                <circle cx="93.1" cy="93.1" r="93.1"></circle>
+                <circle cx="93.1" cy="93.1" r="93.1" id="mm"></circle>
+              </svg>
+              <div id="minutes">00</div>
+            </div>
+            <div class="time__circle">
+              <div class="time__dot sec_dot"></div>
+              <svg>
+                <circle cx="93.1" cy="93.1" r="93.1"></circle>
+                <circle cx="93.1" cy="93.1" r="93.1" id="ss"></circle>
+              </svg>
+              <div id="seconds">00</div>
+            </div>
+          </div>
         </div>
       </section>
 
+      <section class="page__quote qoute">
+        <div class="quote__container _container">
+          <button class="quote__button">Новая цитата</button>
+          <p class="quote__statement">Very little is needed to make a happy life; it is all within yourself, in your way
+            of thinking.</p>
+          <p class="quote__author">Marcus Aurelius</p>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footer__container">
-        <span>© 2022</span>
+        <span>© 2022 by Andrey Antonov</span>
         <a class="footer__link" href="https://github.com/klekkwedge" target="_blank">github</a>
       </div>
     </footer>
 
   </div>
-  <script src="dist/bundle.js"></script>
+  <script src="js/bundle.js"></script>
 </body>
 
 </html>
