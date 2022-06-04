@@ -1,4 +1,3 @@
-"use strict";
 function clock() {
   function getTime() {
     const date = new Date();
@@ -15,25 +14,25 @@ function clock() {
   setInterval(() => {
     const newTime = getTime();
 
-    const hours = document.querySelector("#hours");
-    const minutes = document.querySelector("#minutes");
-    const seconds = document.querySelector("#seconds");
+    const hours = document.querySelector('#hours');
+    const minutes = document.querySelector('#minutes');
+    const seconds = document.querySelector('#seconds');
 
-    const hourStep = document.querySelector("#hh");
-    const minuteStep = document.querySelector("#mm");
-    const secondStep = document.querySelector("#ss");
+    const hourStep = document.querySelector('#hh');
+    const minuteStep = document.querySelector('#mm');
+    const secondStep = document.querySelector('#ss');
 
-    const hourDot = document.querySelector(".hour_dot");
-    const minDot = document.querySelector(".min_dot");
-    const secDot = document.querySelector(".sec_dot");
+    const hourDot = document.querySelector('.hour_dot');
+    const minDot = document.querySelector('.min_dot');
+    const secDot = document.querySelector('.sec_dot');
 
-    const h =  dateColon(newTime.getHours());
+    const h = dateColon(newTime.getHours());
     const m = dateColon(newTime.getMinutes());
     const s = dateColon(newTime.getSeconds());
 
-    hours.innerHTML = h + "<br><span>Часы</span>";
-    minutes.innerHTML = m + "<br><span>Минуты</span>";
-    seconds.innerHTML = s + "<br><span>Секунды</span>";
+    hours.innerHTML = `${h}<br><span>Часы</span>`;
+    minutes.innerHTML = `${m}<br><span>Минуты</span>`;
+    seconds.innerHTML = `${s}<br><span>Секунды</span>`;
 
     hourStep.style.strokeDashoffset = 585.2 - (585.2 * h) / 24;
     minuteStep.style.strokeDashoffset = 585.2 - (585.2 * m) / 60;
